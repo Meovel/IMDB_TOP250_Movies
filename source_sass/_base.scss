@@ -1,1 +1,81 @@
-// Add any custom Sass & CSS here
+@import "mixins";
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  line-height: 150px;
+}
+
+h5 {
+  color: grey;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.topBar {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 20px;
+}
+
+.gallery {
+
+  img {
+    width: 100%;
+    height: 400px;
+  }
+
+  .poster {
+    border: groove;
+    margin-top: 20px;
+    height: 480px;
+    position:relative;
+
+    .description {
+      text-align: center;
+      .movieName {
+        margin-top: 5px;
+        font-weight: bold;
+      }
+      .movieRate {
+        color: grey;
+        position: absolute;
+        bottom: 0;
+        left: 35%
+      }
+    }
+  }
+}
+
+.detail {
+  h1 {
+    font-size: 40px;
+    line-height: 80px;
+  }
+
+  .button-group {
+    padding-bottom: 20px;
+    .button {
+      width: 100%;
+    }
+  }
+
+  .detailInfo {
+    img {
+      @include image-horizontal-center();
+      margin-top: 30px;
+    }
+
+    .description {
+      font-size: 18px;
+    }
+  }
+}
+
+.search {
+  .result {
+    img {
+      height: 80px;
+    }
+  }
+}

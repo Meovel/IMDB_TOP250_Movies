@@ -1,0 +1,33 @@
+<div class="gallery">
+    <h1>Gallery</h1>
+    <h5>I wanna
+        <a href="#/search">
+            search
+        </a>
+        from these classics
+    </h5>
+
+    <select class="topBar" movie-filter>
+        <option ng-repeat="genre in movieData.genres" ng-attr-value="genre" ng-bind="genre"></option>
+    </select>
+
+    <div class="row small-up-1 medium-up-2 large-up-4">
+        <div class="columns" ng-repeat="movie in movieData.filteredMovies | orderBy:movieData.orderAttr:false">
+            <div class="poster" data-index="{{$index}}" movie-poster>
+                <div>
+                    <a href="#/gallery/{{movie.imdbID}}">
+                        <img ng-attr-src="./data/images/{{movie.imdbID}}.jpg">
+                    </a>
+                </div>
+                <div class="description">
+                    <div class="movieName">
+                        <span ng-bind="movie.title"></span>
+                    </div>
+                    <div class="movieRate">
+                        Rating: <span ng-bind="movie.imdbRating"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

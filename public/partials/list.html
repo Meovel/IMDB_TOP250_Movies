@@ -1,0 +1,40 @@
+<div class="search">
+    <div>
+        <h1>Super Search</h1>
+        <h5>Go to the
+            <a href="#/gallery">
+            Gallery
+            </a>
+        </h5>
+
+        <div class="topBar">
+            <input type="text" search-keyword>
+        </div>
+    </div>
+
+    <table class="hover topBar result">
+        <thead>
+        <tr>
+            <th>Poster</th>
+            <th><a href="" sort-result ng-attr-value="genre">Title</a></th>
+            <!--<th><a href="" ng-click="movieData.operation.sortMovies('title')">Title</a></th>-->
+            <th><a href="" ng-click="movieData.operation.sortMovies('rank')">Rank</a></th>
+            <th><a href="" ng-click="movieData.operation.sortMovies('imdbRating')">Score</a></th>
+            <th>Released Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr style="max-height: 100px" ng-repeat="movie in movieData.filteredMovies" data-index="{{$index}}" movie-item>
+            <td>
+                <a href="#/gallery/{{movie.imdbID}}">
+                    <img ng-attr-src="./data/images/{{movie.imdbID}}.jpg">
+                </a>
+            </td>
+            <td><span ng-bind="movie.title"></span></td>
+            <td><span ng-bind="movie.rank"></span></td>
+            <td><span ng-bind="movie.imdbRating"></span></td>
+            <td><span ng-bind="movie.released"></span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
