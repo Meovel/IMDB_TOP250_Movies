@@ -26,7 +26,7 @@ app.config(['$routeProvider', function($routeProvider){
         })
         // Default view is list
         .otherwise({
-            redirectTo: '/search'
+            redirectTo: '/gallery'
         });
 }]);
 

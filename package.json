@@ -1,8 +1,9 @@
 {
-  "name": "mp3_starter",
+  "name": "IMDB_TOP_250_Movies",
   "version": "2.0.0",
-  "homepage": "https://github.com/uiuc-web-programming/mp3_starter",
+  "homepage": "http://www.zengineerhao.com",
   "authors": [
+    "Hao Zhang <me@zengineerhao.com>",
     "biplabdeka <biplab.deka@gmail.com>",
     "sskhandek <sskhandek@gmail.com>"
   ],
